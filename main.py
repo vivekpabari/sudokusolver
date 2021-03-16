@@ -1,5 +1,3 @@
-from pprint import pprint
-
 def nextrc(puzzle):
     for i in range(9):
         for j in range(9):
@@ -43,4 +41,11 @@ if __name__ == '__main__':
     for i in range(9):
         li.append(list(map(int,input().split())))
     solve(li)
-    pprint(li)
+        for i in range(len(li)):
+            if i == 3 or i == 6 :
+                print("------------------------")
+            for j in range(9):
+                if j == 3 or j == 6 :
+                    print(" | ",end="")
+                print(li[i][j],end=" ")
+            print()
